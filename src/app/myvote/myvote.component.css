@@ -140,5 +140,14 @@
         color: #FFF;
         margin-top: 6px;
     }
+
+
+    .nav-item input[type="file"]{
+        position: absolute;
+        top: 15px;
+        right: 0px;
+        width: 163px;
+        opacity: 0;
+    }
     
     /* end cards */ 
