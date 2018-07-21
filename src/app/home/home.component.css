@@ -1,0 +1,435 @@
+/* media */
+
+@media(max-width:572px){
+
+.header[_ngcontent-c1] .header-content[_ngcontent-c1] h1[_ngcontent-c1]{
+font-size: 30px;
+}
+
+iframe{
+    width: 260px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+}
+
+/* media */
+
+
+/* start navbar */
+
+
+.navbar-dark .navbar-nav .nav-link {
+
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+.navbar-dark .navbar-brand {
+
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+/* end navbar */
+
+/* start header */
+
+.header {
+
+    position: relative;
+}
+
+
+
+#one {    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: content-box;
+    background-image:url('../../assets/img/home.jpg');
+}
+
+#two {  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image:url('../../assets/img/slide.jpg');
+
+}
+
+#three {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image:url('../../assets/img/s3.jpg');
+}
+
+
+.header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.carousel-indicators li {
+    height: 9px;
+}
+
+.header .header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.header .header-content h1 {
+    color: #FFF;
+    font-size: 3.9rem;
+    letter-spacing: 3px;
+}
+
+.header .header-content span {
+    text-shadow: 4px 0px #007bff;
+}
+
+/* end header */
+
+
+/*  start signup  */
+
+.signup {
+    background: #fbfbfb;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.signup h2 {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 20px;
+    font-weight: bold;
+
+
+}
+
+.signup .sign-header {
+    margin-bottom: 30px;
+}
+
+.signup .sign-header .sign-upper {
+    display: flex;
+}
+
+
+.signup .sign-header .sign-upper button {
+    width: 100%;
+    border-radius: 0px;
+    padding: 15px;
+    font-size: 17px;
+    font-family: 'Merienda', cursive;
+}
+
+.signup .sign-header .sign-upper button:focus{
+    box-shadow: 0px 0px 0px 0px;
+}
+
+
+.sign-header .login-content {
+    background: #FFF;
+    padding: 20px;
+}
+
+.sign-header .login-content .email,.sign-header .login-content .pass {
+    position: relative;
+}
+
+.sign-header .login-content .email input,.sign-header .login-content .pass input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border:1px solid #CCC;
+    padding-left: 39px;
+    margin-bottom: 10px;
+}
+
+
+
+.sign-header .login-content .email i,.sign-header .login-content .pass i {
+    position: absolute;
+    top: 19px;
+    left: 13px;
+}
+
+.sign-header .login-content .login-buttom {
+    position: relative;
+}
+
+.sign-header .login-content .login-buttom #btn-login {
+    display: block;
+    border: 1px solid #007bff;
+    padding: 8px 17px 8px 17px;
+    background: transparent;
+}
+
+
+.sign-header .login-content .login-buttom span {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+#btn-login {
+    position: relative;
+    width: 75.22px;
+    height: 42px;
+}
+
+
+
+#btn-login p, #btn-signup p {
+    margin: 0px;
+}
+
+#btn-login i {
+    position: absolute;
+    top: 13px;
+    left: 25px;
+    display: none;
+}
+
+#btn-signup i {
+    position: absolute;
+    top: 13px;
+    display: none;
+    left: 36px;
+}
+
+
+.alert {
+    display: none;
+    margin-top: 10px;
+}
+
+.alert p {
+    margin: 0px;
+    display: inline-block;
+}
+
+.alert button {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.sign-header .login-content .login-buttom .alert {
+    margin-top: 15px;
+}
+
+
+
+.sign-header .signup-content {
+    background: #FFF;
+    padding: 20px;
+    display: none;
+}
+
+.sign-header .signup-content .email,.sign-header .signup-content .pass {
+    position: relative;
+}
+
+.sign-header .signup-content .email input,.sign-header .signup-content .pass input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border:1px solid #CCC;
+    padding-left: 39px;
+    margin-bottom: 10px;
+}
+
+
+
+.sign-header .signup-content .email i,.sign-header .signup-content .pass i {
+    position: absolute;
+    top: 19px;
+    left: 13px;
+}
+
+.sign-header .signup-content .signup-buttom {
+    position: relative;
+}
+
+.sign-header .signup-content .signup-buttom #btn-signup  {
+    display: block;
+    border: 1px solid #007bff;
+    padding: 8px 17px 8px 17px;
+    background: transparent;
+    width: 92.91px;
+    height: 42px;
+}
+
+
+.sign-header .signup-content .signup-buttom span {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+.signup .secure i {
+    width: 150px;
+    height: 150px;
+    background: #007bff;
+    line-height: 150px;
+    font-size: 40px;
+    color: #FFF;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.signup .secure p {
+    font-size: 30px;
+    font-family: 'Arvo', serif;
+
+}
+/*  end signup  */
+
+
+/* start about */ 
+
+.about-as {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.about-as h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.about-as .lead {
+    line-height: 2em;
+    margin-bottom: 10px;
+}
+
+.about-as .carousel-indicators li {
+    background: #007bff;
+}
+
+
+.about-as p {
+    max-width: 650px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.about-as span {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    color: #007bff;
+}
+
+.about-as .carousel-inner {
+}
+
+.about-as .carousel-indicators {
+    position: static;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+
+.about-as .carousel-indicators li {
+    text-indent: 0;
+    width: 80px;
+    border-radius: 50%;
+    height: 80px;
+    opacity: 0.6;
+    border: 2px solid #FFF;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.about-as .carousel-indicators li.active {
+    opacity: 1;
+    background: none;
+    border: 2px solid #007bff;
+
+}
+
+.about-as .carousel-indicators li img {
+    max-width: 100%;
+    max-height: 84px;
+}
+
+.about-as i {
+    color: #007bff;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/* end about */ 
+
+/* start fotter */ 
+
+.fotter {
+background: #007bff;
+color: #FFF;
+}
+
+.fotter .content {
+    padding: 20px;
+}
+
+.fotter .content p {
+    font-family: 'Merienda', cursive;
+    font-size: 25px;
+}
+
+.fotter .content i {
+    font-size: 35px;
+    margin: 6px;
+    margin-bottom: 20px;
+}
+
+.fotter .content input, textarea {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    border:1px solid #CCC;
+}
+
+.fotter .content button {
+    background: transparent;
+    border: 2px solid #FFF;
+    padding: 7px 15px 7px 15px;
+    color: #FFF;
+
+}
+
+/* end fotter */
+
+
+/* start media */
+
+

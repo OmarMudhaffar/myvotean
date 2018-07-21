@@ -1,0 +1,124 @@
+<!-- start navbar -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+  <a class="navbar-brand" href="#">MyVote</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link">Votes <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="myvote()">MyVote</a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link" id="add">ADD</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" (click)="logout()">Logout</a>
+          </li>
+
+          <li class="nav-item" style="position: relative;">
+              <input type="file" (change)="takePhoto($event)">
+              <img [src]="image" width="40" height="40"  style="border-radius: 50%;" >
+          </li>
+
+    </ul>
+ 
+  </div>
+
+
+</div>
+
+</nav>
+
+<!-- end navbar -->
+
+
+<!-- start vote card -->
+
+<div class="cards text-center">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm">
+
+    <div class="card text-left" *ngFor="let item of list | async | reverse">
+        <div class="card-body">
+          <img [src]="item.payload.val().image">
+          <h5 class="card-title">{{item.payload.val().name}}</h5>
+          <span class="date text-right" float-right>{{item.payload.val().year}}</span>
+
+          <p class="lead">{{item.payload.val().text}}</p>
+          
+
+          <div class="sections">
+              <div class="like-icon">
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"  (click)="setLike(item.key,item.payload.val().like,item.payload.val().dis,item.payload.val().love)"></i>
+                  <span class="badge badge-primary">{{item.payload.val().like}}</span>
+              </div>
+              <div class="love-icon">
+                  <i class="fa fa-heart-o" aria-hidden="true"   (click)="setLove(item.key,item.payload.val().like,item.payload.val().dis,item.payload.val().love)"  ></i>
+                  <span class="badge badge-primary">{{item.payload.val().love}}</span>
+              </div>
+              <div class="dis-icon">
+                  <i class="fa fa-thumbs-o-down" aria-hidden="true" (click)="setDis(item.key,item.payload.val().like,item.payload.val().dis,item.payload.val().love)"  ></i>
+                  <span class="badge badge-primary">{{item.payload.val().dis}}</span>
+              </div>
+
+          </div>
+
+
+        </div>
+        </div>
+
+</div>
+
+
+<div class="d-none d-lg-block  col-sm">
+
+   <img src="../../assets/img/ads.jpg">
+  
+  </div>
+
+</div>
+
+</div>
+
+
+
+<!-- start add post -->
+
+<div class="add-post">
+
+  <div class="addcontent text-center">
+      <i class="fa fa-times text-right" aria-hidden="true"></i>
+  <h3>Add New Vote</h3>
+
+  <textarea placeholder="Your vote" #text></textarea>
+
+  <div class="mybut text-left">
+      <button (click)="add(text.value)">POST</button>
+  </div>
+
+  </div>
+  
+  </div>
+  
+  <!-- end add post -->
+
+
+</div>
+
+<!-- end vote card -->
+

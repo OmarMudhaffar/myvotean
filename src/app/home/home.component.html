@@ -1,0 +1,309 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+  <a class="navbar-brand" href="#">MyVote</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#register">register</a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+      
+        <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+    </ul>
+ 
+  </div>
+
+
+</div>
+
+</nav>
+
+<!-- end navbar -->
+
+<!-- start header -->
+
+<div class="header">
+
+<div class="overlay"></div>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="one">
+      </div>
+      <div class="carousel-item" id="two">
+      </div>
+      <div class="carousel-item" id="three">
+      </div>
+    </div>
+   
+  </div>
+
+
+  <div class="header-content">
+    <div class="container">
+      <h1 class="headh wow fadeInRight">
+         MyVote Let others <br />  decide what is best for <br /> <span>you</span>
+      </h1>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- end header -->
+
+
+<!-- start signup -->
+
+<div class="signup text-center" id="register">
+
+<div class="container">
+
+  <h2>Login Or Register</h2>
+
+  <div class="row">
+
+   <div class="col-sm">
+      <div class="sign-header text-center wow bounceInLeft">
+
+          <div class="sign-upper">
+            <button class="loginbut btn btn-primary">Login</button>
+            <button class="signupbut btn btn-primary">Register</button>
+        
+          </div>
+
+          <div class="login-content">
+
+            <div class="email">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <input type="email" required placeholder="E-mail" #email>
+            </div>
+
+            <div class="pass">
+                <i class="fa fa-key" aria-hidden="true"></i>
+                <input type="password" required placeholder="Password" #pass>
+              </div>
+
+              <div class="login-buttom">
+                  <button id="btn-login" (click)="login(email.value,pass.value)">
+                    
+                      <p>
+                          Login
+                      </p>
+
+                      <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+
+                  </button>
+                  <span class="float-right">Reset password?</span>
+
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert-login">
+                      <p>error</p>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+
+              </div>
+
+          </div>
+
+
+          <!-- signup -->
+
+          <div class="signup-content ">
+
+              <div class="email">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <input type="email" required placeholder="E-mail" name="email" #regemail>
+              </div>
+
+              <div class="pass">
+                  <i class="fa fa-key" aria-hidden="true"></i>
+                  <input type="text" required placeholder="Full-name" name="name" #regname>
+                </div>
+  
+              <div class="pass">
+                  <i class="fa fa-key" aria-hidden="true"></i>
+                  <input type="password" required placeholder="Password" name="pass" #regpass>
+                </div>
+  
+                <div class="signup-buttom">
+                    <button id="btn-signup" (click)="signup(regemail.value,regname.value,regpass.value)">
+                    
+                        <p>
+                            Register
+                        </p>
+  
+                        <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+  
+                    </button>
+                    <span class="float-right">I'ts free!</span>
+                    
+                    <div class="alert alert-success alert-dismissible fade show" role="alert" id="suc">
+                        <p>error</p>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <div class="alert alert-danger alert-dismissible fade show" role="alert" id="dang">
+                          <p>error</p>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+
+                </div>
+  
+            </div>
+        
+        </div>
+   </div>
+
+   <div class="d-none d-lg-block col-sm ">
+     <div class="secure wow bounceInRight">
+            <i class="fa fa-shield" aria-hidden="true"></i>
+             <p class="pres">0%</p>
+     </div>
+   </div>
+
+  </div>
+
+
+</div>
+
+</div>
+
+<!-- end signup -->
+
+
+<!-- start about -->
+
+<section class="about-as text-center" id="about">
+
+<div class="container">
+
+
+<h2 class="wow fadeInDown">ABOUT AS</h2>
+
+
+<div id="myabout" class="carousel slide" data-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <p class="lead">
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+       Hello My Name is Omar I was born in 2001 in iraq baghdad i started to learn code when i was 15 years work as web developer at codeforiraq
+    <i class="fa fa-quote-right" aria-hidden="true"></i>
+    </p>
+    <span>OmarReal</span>
+    </div>
+    <div class="carousel-item">
+        <p class="lead">
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+             MuhammedEssa was born in 1960 iraq karkuk worked as software engineering at DevOps Creator and founder codeforiraq
+            <i class="fa fa-quote-right" aria-hidden="true"></i>
+        </p>
+              <span>MuhammedEssa</span>
+    </div>
+    <div class="carousel-item">
+        <p class="lead">
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+            An independent charitable organization aimed at serving the Iraqi society in terms of technology          <i class="fa fa-quote-right" aria-hidden="true"></i>
+        </p>
+              <span>CodeForIraq</span>
+    </div>
+  </div>
+
+  <ol class="carousel-indicators">
+    <li data-target="#myabout" data-slide-to="0" class="active wow shake">
+      <img src="../../assets/img/omar.jpg">
+    </li>
+    <li data-target="#myabout" data-slide-to="1" class=" wow shake">
+      <img src="../../assets/img/muhammed.jpg">
+    </li>
+    <li data-target="#myabout" data-slide-to="2" class=" wow shake">
+      <img src="../../assets/img/iq.png">
+    </li>
+  </ol>
+
+</div>
+
+</div>
+
+
+</section>
+
+<!-- end about -->
+
+
+<!-- start fotter -->
+
+<section class="fotter" id="contact">
+
+<div class="container">
+
+  <div class="row wow bounceIn">
+
+
+    <div class="col-sm">
+    <div class="content">
+        <p class="lead"> Following As By Social Media</p>
+        <i class="fa fa-youtube-square" aria-hidden="true"></i>
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        <i class="fa fa-github-square" aria-hidden="true"></i>
+        <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+
+        <iframe width="360" height="170" src="https://www.youtube.com/embed/FNWEAogXz7Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    </div>
+    </div>
+
+
+    <div class="col-sm">
+
+      <div class="content">
+          <p class="lead">Send FeedBack</p>
+          <input type="email" placeholder="E-mail" #fedmail>
+          <input type='text' placeholder="Full-name" #fedname>
+          <textarea placeholder="Yor message" #fedtext></textarea>
+          <button (click)="sendFed(fedmail.value,fedname.value,fedtext.value)" >Send Message</button>
+          <span id="sfed" class="float-right lead" style="line-height: 50px;display: none;">Done Your Message Sent!</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+
+<!-- end footer -->

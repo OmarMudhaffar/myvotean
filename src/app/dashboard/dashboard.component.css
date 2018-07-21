@@ -1,0 +1,151 @@
+/* start navbar */
+
+.nav-link {
+    cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+
+.nav-item input[type="file"]{
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 163px;
+    opacity: 0;
+}
+
+.navbar-dark .navbar-brand {
+
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+/* end navbar */
+
+
+/* start cards */
+
+
+.cards {
+
+margin-top: 30px;
+position: relative;
+
+}
+
+.cards .card-title {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.cards .card-body img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cards .sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #CCC;
+    padding-top: 20px;
+}
+
+.cards .sections .like-icon, .love-icon, .dis-icon {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .sections i {
+    transition: 0.2s;
+}
+
+.cards .sections i:hover {
+    transform: scale(1.2);
+}
+
+.cards .card {
+    margin-bottom: 15px;
+}
+
+.cards .sections span {
+    display: inline-block;margin-left: 4px; font-size: 14px;padding: 0.20em .3em;
+}
+
+.cards .date {
+    float: right;
+    position: relative;
+    top: 13px;
+    font-size: 15px;
+    color: #757171;
+}
+
+.add-post {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.add-post .addcontent {
+    padding: 11px;
+    background: #007bff;
+    width: 550px;
+    position: relative;
+    box-shadow: 0px 3px 10px -3px;
+    border-radius: 3px;
+}
+
+.add-post .addcontent h3 {
+color: #FFF;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.add-post .addcontent textarea {
+    width: 100%;
+    border:1px solid #CCC;
+    padding: 10px;
+    height: 100px;
+    border-radius: 3px;
+}
+
+.add-post .addcontent i {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /* line-height: 80px; */
+    margin: 17px;
+    font-size: 30px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.mybut button {
+    padding: 7px 15px 7px 15px;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #FFF;
+    margin-top: 6px;
+}
+
+/* end cards */ 
