@@ -273,7 +273,7 @@
     <div class="col-sm">
     <div class="content">
         <p class="lead"> Following As By Social Media</p>
-        <i class="fa fa-youtube-square" aria-hidden="true"></i>
+        <i class="you fa fa-youtube-square" aria-hidden="true"></i>
         <i class="fa fa-facebook-square" aria-hidden="true"></i>
         <i class="fa fa-twitter-square" aria-hidden="true"></i>
         <i class="fa fa-github-square" aria-hidden="true"></i>
@@ -289,9 +289,9 @@
 
       <div class="content">
           <p class="lead">Send FeedBack</p>
-          <input type="email" placeholder="E-mail" #fedmail>
-          <input type='text' placeholder="Full-name" #fedname>
-          <textarea placeholder="Yor message" #fedtext></textarea>
+          <input type="email" placeholder="E-mail" #fedmail required="required">
+          <input type='text' placeholder="Full-name" #fedname required="required">
+          <textarea placeholder="Yor message" #fedtext required="required"></textarea>
           <button (click)="sendFed(fedmail.value,fedname.value,fedtext.value)" >Send Message</button>
           <span id="sfed" class="float-right lead" style="line-height: 50px;display: none;">Done Your Message Sent!</span>
       </div>

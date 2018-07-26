@@ -28,7 +28,12 @@ h2 {
     text-transform: uppercase;
     font-size: 17px;
     font-family: 'Roboto Mono', monospace;
+    transition: 0.2s;
 
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    transform: scale(1.1);
 }
 
 
@@ -315,7 +320,12 @@ h2 {
 .about-as {
     padding-top: 40px;
     padding-bottom: 40px;
+    background-image: url('../../assets/img/back.svg');
+    background-repeat: no-repeat;
+    background-origin: content-box;
 }
+
+
 
 .about-as h2 {
     font-weight: bold;
@@ -408,7 +418,14 @@ color: #FFF;
     font-size: 35px;
     margin: 6px;
     margin-bottom: 20px;
+    transition: 0.2s;
 }
+
+.fotter .content i:hover {
+    transform: scale(1.4);
+    color: #fbfbfb;
+}
+
 
 .fotter .content input, textarea {
     padding: 10px;

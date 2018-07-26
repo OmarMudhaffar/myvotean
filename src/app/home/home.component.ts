@@ -163,6 +163,8 @@ export class HomeComponent implements OnInit {
         
 
         }).catch(err => {
+          $("#btn-signup p").show();
+          $("#btn-signup i").hide();  
           $("#dang").show();
           $("#dang p").text(err.message);
         });
@@ -174,7 +176,9 @@ export class HomeComponent implements OnInit {
 
       if(userche[0] != undefined){
         $("#dang").show();
-        $("#dang p").text("username is already taken");
+        $("#dang p").text("name is already taken");
+        $("#btn-signup p").show();
+        $("#btn-signup i").hide();  
       }
 
       sub.unsubscribe();
@@ -191,7 +195,8 @@ export class HomeComponent implements OnInit {
 
  sendFed(email,name,text){
   if(email.length > 0 && name.length > 0 && text.length > 0){
-    $.get("https://api.telegram.org/bot577083786:AAE8P9QtbEpeI_FNua4XDTatyyZlXJbNX5s/sendMessage?chat_id=578601940&text=email : " + email + "\n          name : " + name + "\n                 message : " + text,function(data){
+    var mesg = "{email :" + email + "}\n{name : " + name + "}\n{message : " + text + " }"
+    $.get("https://api.telegram.org/bot577083786:AAE8P9QtbEpeI_FNua4XDTatyyZlXJbNX5s/sendMessage?chat_id=578601940&text=" + mesg ,function(data){
     if(data.ok == true){
       $("#sfed").slideUp( 300 ).delay( 800 ).fadeIn( 400 );
       

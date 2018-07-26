@@ -142,12 +142,14 @@
     }
 
 
+
     .nav-item input[type="file"]{
         position: absolute;
-        top: 15px;
-        right: 0px;
-        width: 163px;
+        top: 6px;
+        width: 9px;
+        height: 10px;
         opacity: 0;
     }
+    
     
     /* end cards */ 

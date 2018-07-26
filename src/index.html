@@ -22,9 +22,23 @@
     <script type="text/html" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/html" src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script type="text/html" src="../node_modules/wowjs/dist/wow.js"></script>
-    <script type="text/html" src="../node_modules/nicescroll/dist/jquery.nicescroll.min.js"></script>
+    <script src="assets/js/jqyery.js"></script>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/smooth-scroll.min.js"></script>
 
-  
+    
+    <script>
+      $("body").niceScroll({
+    cursorcolor: "#007bff",
+    cursorborder: "0",
+    cursorwidth:"10px",
+    zindex:2323
+  });
+
+  	var scroll = new SmoothScroll('a[href*="#"]');
+
+
+  </script> 
 
   <app-root></app-root>
 
