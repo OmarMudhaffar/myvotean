@@ -43,6 +43,17 @@ position: relative;
 
 }
 
+@media(max-width:750px){
+
+    .cards {
+
+        margin-top: 10px;
+        position: relative;
+        
+        }
+
+}
+
 .cards .card-title {
     display: inline-block;
     margin-left: 10px;

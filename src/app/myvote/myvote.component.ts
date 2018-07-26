@@ -30,6 +30,8 @@ export class MyvoteComponent implements OnInit {
       if(res != undefined){
         
       
+        if(res.emailVerified){
+
         let email = auth.auth.currentUser.email;
         this.list =  db.list("vote",ref => ref.orderByChild("email").equalTo(email)).snapshotChanges();
   
@@ -38,6 +40,12 @@ export class MyvoteComponent implements OnInit {
          this.image = data[0]["image"];
          this.verified = data[0]['verified']
        });
+
+      }
+
+      if(!res.emailVerified){
+        route.navigate(['/']);
+      }
        
        
       }

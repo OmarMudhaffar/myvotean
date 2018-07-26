@@ -28,13 +28,24 @@ export class DashboardComponent implements OnInit {
         route.navigate(['/']);
       }
 
+
+
       if(res != null){ 
-        db.list("users",ref => ref.orderByChild("email").equalTo(res.email)).valueChanges().forEach(data => {
-          this.image = data[0]["image"];
-          this.name = data[0]["name"];
-          this.verified = data[0]['verified']
-        });
-      }
+
+        if(res.emailVerified){
+          db.list("users",ref => ref.orderByChild("email").equalTo(res.email)).valueChanges().forEach(data => {
+            this.image = data[0]["image"];
+            this.name = data[0]["name"];
+            this.verified = data[0]['verified']
+          });
+        }
+        }
+
+        if(!res.emailVerified){
+          route.navigate(['/']);
+        }
+
+        
 
     })
 
@@ -51,6 +62,9 @@ export class DashboardComponent implements OnInit {
     $(".addcontent i").click(function(){
       $(".add-post").css("display","none");
     });
+
+
+ 
 
   }
 

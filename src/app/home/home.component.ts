@@ -18,7 +18,10 @@ export class HomeComponent implements OnInit {
     auth.authState.subscribe( res=> {
 
       if(res != undefined){
+        
+        if(res.emailVerified){
         route.navigate(['/dashboard']);
+        }
       }
 
     })
@@ -157,7 +160,9 @@ export class HomeComponent implements OnInit {
           var user = this.auth.auth.currentUser;
           user.sendEmailVerification().then( ()=> {
            $("#suc").show();
-           $("#suc p").text("Activation link have been sent to your email")
+           $("#btn-login p").show();
+           $("#btn-login i").hide();
+           $("#suc p").text("Activation link have been sent to your email");
           });
 
         
