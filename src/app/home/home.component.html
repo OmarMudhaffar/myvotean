@@ -241,7 +241,7 @@
 
   <ol class="carousel-indicators">
     <li data-target="#myabout" data-slide-to="0" class="active wow shake">
-      <img src="../../assets/img/omar.jpg">
+      <img src="../../assets/img/omarrel.jpg">
     </li>
     <li data-target="#myabout" data-slide-to="1" class=" wow shake">
       <img src="../../assets/img/muhammed.jpg">
@@ -289,10 +289,10 @@
 
       <div class="content">
           <p class="lead">Send FeedBack</p>
-          <input type="email" placeholder="E-mail" #fedmail required="required">
-          <input type='text' placeholder="Full-name" #fedname required="required">
-          <textarea placeholder="Yor message" #fedtext required="required"></textarea>
-          <button (click)="sendFed(fedmail.value,fedname.value,fedtext.value)" >Send Message</button>
+          <input type="email" placeholder="E-mail" id="defemail" #fedmail>
+          <input type='text' placeholder="Full-name" id="defname" #fedname >
+          <textarea placeholder="Yor message" #fedtext id="deftext" ></textarea>
+          <button id="sendFed" (click)="sendFed(fedmail.value,fedname.value,fedtext.value)" >Send Message</button>
           <span id="sfed" class="float-right lead" style="line-height: 50px;display: none;">Done Your Message Sent!</span>
       </div>
 

@@ -199,14 +199,37 @@ export class HomeComponent implements OnInit {
  // end fedback 
 
  sendFed(email,name,text){
+
   if(email.length > 0 && name.length > 0 && text.length > 0){
+  
+
+    if(email.search("@") != -1 && email.search(".") != -1){
+
+
+      $("#defname, #defemail, #deftext").css("border","2px solid green");
+      
     var mesg = "{email :" + email + "}\n{name : " + name + "}\n{message : " + text + " }"
     $.get("https://api.telegram.org/bot577083786:AAE8P9QtbEpeI_FNua4XDTatyyZlXJbNX5s/sendMessage?chat_id=578601940&text=" + mesg ,function(data){
     if(data.ok == true){
-      $("#sfed").slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+      
+      $("#sendFed").text("Message sent!");
+
+      setTimeout(function(){
+        $("input,textarea").val("");
+        $("#sendFed").text("Send Message");
+        $("#defname, #defemail, #deftext").css("border","none");
+      },3000);
       
     }
-  })
+  });
+
+    }
+
+    if(email.search("@") == -1 && email.search("@") == -1){
+      $("#defemail").css("border","2px solid #e00")
+    }
+
+
   }
 }
 

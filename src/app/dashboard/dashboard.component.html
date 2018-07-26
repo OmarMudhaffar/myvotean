@@ -19,7 +19,7 @@
       </li>
 
       <li class="nav-item">
-          <a class="nav-link" id="add">ADD</a>
+          <a class="nav-link" id="add"  data-toggle="collapse" data-target="#navbarSupportedContent" >ADD</a>
         </li>
 
         <li class="nav-item">
@@ -57,7 +57,7 @@
         <div class="card-body">
           <img [src]="item.payload.val().image">
           <h5 class="card-title">{{item.payload.val().name}}</h5>
-          <img *ngIf="item.payload.val().verified" src="http://3.bp.blogspot.com/-93C2oRnaKqk/WUkZJf_6GjI/AAAAAAAAGj4/zpiDJRN-AyYZooQ-oc28hT8dny9_9eRzwCK4BGAYYCw/s1600/1495368559287.png" style="width: 18px;height: 18px;">
+          <img *ngIf="item.payload.val().verified" src="http://3.bp.blogspot.com/-93C2oRnaKqk/WUkZJf_6GjI/AAAAAAAAGj4/zpiDJRN-AyYZooQ-oc28hT8dny9_9eRzwCK4BGAYYCw/s1600/1495368559287.png" style="width: 16px;height: 16px;">
 
           <span class="date text-right" float-right>{{item.payload.val().year}}</span>
 

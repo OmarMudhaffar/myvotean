@@ -62,11 +62,11 @@ export class MyvoteComponent implements OnInit {
     $(".add-post").height(winh);
 
     $("#add").click(function(){
-      $(".add-post").css("display","flex");
+      $(".addview").css("display","flex");
     });
 
     $(".addcontent i").click(function(){
-      $(".add-post").css("display","none");
+      $(".addview").css("display","none");
     });
 
    
@@ -75,17 +75,17 @@ export class MyvoteComponent implements OnInit {
   showEdit(text,key){
     var winh = $(window).height();
     var navh = $(".navbar").innerHeight();
-    $(".add-post").height(winh - navh);
+    $(".editView").height(winh - navh);
 
     $(".love-icon i").click(function(){
-      $(".add-post").css("display","flex");
+      $(".editView").css("display","flex");
     });
 
-    $("textarea").val(text);
+    $(".editView textarea").val(text);
     $("#mykey").val(key);
 
     $(".addcontent i").click(function(){
-      $(".add-post").css("display","none");
+      $(".editView").css("display","none");
     });
 
   }
