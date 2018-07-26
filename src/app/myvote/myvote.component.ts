@@ -16,6 +16,7 @@ export class MyvoteComponent implements OnInit {
   list : Observable<any>
   image : any;
   verified = false;
+  name = "omar"
 
   constructor( private db : AngularFireDatabase, public auth : AngularFireAuth, public route : Router,public storeg : AngularFireStorage) { 
 
@@ -48,6 +49,18 @@ export class MyvoteComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    var winh = $(window).height();
+    $(".add-post").height(winh);
+
+    $("#add").click(function(){
+      $(".add-post").css("display","flex");
+    });
+
+    $(".addcontent i").click(function(){
+      $(".add-post").css("display","none");
+    });
+
    
   }
 
@@ -134,6 +147,37 @@ export class MyvoteComponent implements OnInit {
   });
 
  }
+
+
+ add(text){
+
+
+  var date = new Date();
+  var year = date.getFullYear();
+  var mo = date.getMonth();
+  var day = date.getDay();
+  var fulldate = year + "/" + mo + "/" + day;
+
+
+  this.db.list("vote").push({
+    text:text,
+    year:fulldate,
+    like:0,
+    dis:0,
+    love:0,
+    email:this.auth.auth.currentUser.email,
+    image:this.image,
+    name:this.name,
+    verified:this.verified
+  }).then( ()=> {
+   $(".add-post").css("display","none");
+    
+
+  });
+
+
+ }
+
 
 
 }
